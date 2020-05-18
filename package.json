@@ -1,0 +1,12 @@
+{
+  "name": "ehealth",
+  "vapid": {
+  },
+  "scripts": {
+    "start": "vapid start .",
+    "build": "vapid build ."
+  },
+  "dependencies": {
+    "@vapid/cli": "^0.9.6"
+  }
+}
