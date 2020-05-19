@@ -1,188 +1,173 @@
-*, *:before, *:after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
+@import './breakpoints';
+
+body{
+    margin:0;
 }
 
-html {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 62.5%;
-  box-sizing: border-box;
+// Buttons, typography, color
+
+$primary:#13ABE0;
+$primary-hover:rgb(1, 147, 201);
+
+$primary-background: #F6FCFE;
+
+.contact-button{
+    color: #ffffff !important;
+    text-decoration: none;
+    background: $primary;
+    padding: 10px;
+    border: 3px solid $primary !important;
+    border-radius: 5px;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+
+    @include media-breakpoint-up(sm){
+        padding:15px 20px;
+    }
+
+    &:hover{
+        color: #ffffff !important;
+        background: $primary-hover;
+        border-color: $primary-hover !important;
+        transition: all 0.4s ease 0s;
+
+    }
 }
 
-body {
-  font-size: 1.6rem;
-  color: #04092E;
-  text-align: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.title{
+    text-align: center;
+    margin-bottom:30px;
 }
 
-a {
-  color: #FFC9E2;
-  transition: 0.1s linear;
+// Block styles
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 8px;
 
-  &:hover {
-    color: darken(#FFC9E2, 10%);
-  }
+    @include media-breakpoint-up(sm){
+        height: 130px;
+    }
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.headline{
+    background-color: $primary-background;
+    &-inner{
+        max-width: 1200px;
+        margin:0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding:30px;
+        
+        @include media-breakpoint-up(sm){
+            flex-direction: row-reverse;
+            align-items: center;
+            height:500px;
+            padding:0;
+        }
+    }
+    .headline-video{
+        @include media-breakpoint-up(sm){
+            width:50%;
+        }
+    }
+    .headline-text{
+        margin-right:20px;
+    }
 }
 
-p {
-  margin: 2rem 0;
-  line-height: 1.4em;
-
-  &:last-of-type {
-    margin-bottom: 0;
-  }
-}
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 70rem;
-}
-
-.button {
-  display: inline-block;
-  padding: 1.2rem 3.3rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #04092E;
-  background: #FFC9E2;
-  border-radius: 4px;
-  cursor: pointer;
-
-  &.login {
-    margin-top: 2rem;
-  }
-
-  &:hover {
-    color: white;
-    background-color: darken(#FFC9E2, 10%);
-  }
-}
-
-.header {
-  padding: 6rem 2rem;
-  flex-direction: column;
-  justify-content: center;
-  color: white;
-  background: #04092E;
-
-  @media screen and (min-width: 960px) {
-    display: flex;
-    min-height: 100vh;
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-  }
-
-  h1, h2 {
-    margin-bottom: 4rem;
-    max-width: 100%;
-    line-height: 1.1em;
-    text-transform: uppercase;
-  }
-
-  h1 {
+.demo{
     display: flex;
     flex-direction: column;
-    flex: 1;
-    justify-content: center;
-    font-family: 'Monoton', cursive;
-    font-size: 6rem;
-    font-weight: normal;
-    width: 1350px;
-    color: #FFC9E2;
-    margin-left: auto;
-    margin-right: auto;
+    padding:10px;
+    
 
-    @media screen and (min-width: 960px) {
-      font-size: 10rem;
+    @include media-breakpoint-up(sm){
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top:30px;
     }
-  }
 
-  h2 {
-    font-size: 1.8rem;
-    font-weight: 800;
-    letter-spacing: 0.4rem;
-
-    @media screen and (min-width: 960px) {
-      font-size: 3rem;
+    .hbspt-form{
+        padding: 30px;
+        border: 1px solid #ccc;
     }
-  }
-
-  div {
-    font-size: 1.6rem;
-    line-height: 1.4em;
-
-    @media screen and (min-width: 960px) {
-      font-size: 1.8rem;
-    }
-  }
-
-  small {
-    display: block;
-    margin-top: 4rem;
-  }
 }
 
-section {
-  padding: 4rem;
-
-  header {
-    margin-bottom: 4rem;
-  }
-
-  a {
-    color: darken(#FFC9E2, 20%);
-
-    &:hover {
-      color: darken(#FFC9E2, 30%);
+.testimonials{   
+    margin:70px 0;
+    @include media-breakpoint-up(sm){
+        margin:80px 0;
     }
-  }
+    ul{
+        list-style: none;
+        padding:0;
+        li{
+            text-align: center;
+
+            @include media-breakpoint-up(sm){
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                text-align: left;          
+
+                .testimonial-text p{
+                    margin-left:40px;
+                }
+            }    
+        }
+    }
 }
 
-form {
-  text-align: left;
-  font-size: 1.8rem;
+.fitur{
+    background-color: $primary-background;
+    padding:40px 0;
+    ul{ 
+        @extend .container;
+        list-style: none;
+        padding:0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-  .field {
-    margin-bottom: 2rem;
-  }
+        @include media-breakpoint-up(sm){
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+        }
 
-  label {
-    display: block;
-    font-weight: 800;
-    margin-bottom: 0.5rem;
-  }
+        li{
+            width:280px;
+            
+            @include media-breakpoint-up(sm){
+                margin:0 20px;
+            }
 
-  input,
-  textarea {
-    font-family: inherit;
-    font-size: inherit;
-  }
 
-  input:not([type=submit]),
-  textarea {
-    width: 100%;
-    padding: 1rem;
-    color: #04092E;
-    border: 1px solid #04092E;
-    outline: 0;
-  }
-
-  textarea {
-    height: 12rem;
-  }
+            img{
+                width: 100%;
+            }
+        }
+    }
 }
 
-footer {
-  padding: 2rem;
+footer{
+    margin: 0 auto;
+    padding: 80px 20px 20px;
+    background: #DFD9D9;
 
-  img {
-    max-width: 10rem;
-  }
+    @include media-breakpoint-up(sm){
+        text-align: center;
+        padding-top:80px;
+    }
 }
+

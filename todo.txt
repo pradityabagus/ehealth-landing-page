@@ -1,0 +1,21 @@
+code plain html isinya konten
+impor responsive grid mixins bootstrap
+button CTA
+- bikin class-class 
+- masukin font ke generator
+- import font
+- set typography
+- set color palette
+- slider
+- analytics
+    - tracking CTA
+- hotjar
+- research SEO keywords
+    - masukin ke descriptions
+- build static n user testing
+- twitter and facebook graph
+
+
+todo fase 2
+-----------
+- bikin versi 2 untuk A/B test
