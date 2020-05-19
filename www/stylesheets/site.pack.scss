@@ -9,15 +9,20 @@ body{
 
 $primary:#13ABE0;
 $primary-hover:rgb(1, 147, 201);
-
+$headings:rgb(99, 99, 99);
+$body-text: #7B7B7B;
 $primary-background: #F6FCFE;
 
 h1,h2,h3,h4{
     font-family: 'helvetica-medium', Helvetica, sans-serif;
+    color: $headings;
+    padding:0;
+    margin:0;
 }
 
 body{
     font-family: 'helvetica-light', Arial, Helvetica, sans-serif;
+    color: $body-text;
 }
 
 .contact-button{
@@ -45,7 +50,7 @@ body{
 
 .title{
     text-align: center;
-    margin-bottom:30px;
+    margin:30px 0;
 }
 
 // Block styles
@@ -74,6 +79,7 @@ header{
         justify-content: space-between;
         flex-direction: column;
         padding:30px;
+        text-align: center;
         
         @include media-breakpoint-up(sm){
             flex-direction: row-reverse;
@@ -88,7 +94,10 @@ header{
         }
     }
     .headline-text{
-        margin-right:20px;
+        @include media-breakpoint-up(sm){
+            margin-right:20px;
+        }
+        
     }
 }
 
@@ -108,7 +117,32 @@ header{
     .hbspt-form{
         padding: 30px;
         border: 1px solid #ccc;
+
+        @include media-breakpoint-up(sm){
+            padding:30px 50px;
+        }
+
     }
+
+    .subheading {
+        margin-top:50px;
+
+        @include media-breakpoint-up(sm){
+            margin:0;
+        }
+        ul{
+        list-style: none;
+        padding:0;
+        text-align: center;
+        
+            li{
+                width:80%;
+                margin: 0 auto;
+            }
+        }
+    }
+    
+    
 }
 
 .testimonials{   

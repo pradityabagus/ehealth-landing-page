@@ -4,8 +4,8 @@ button CTA
 bikin class-class 
 masukin font ke generator
 import font
-- set typography
-- set color palette
+set typography
+set color palette
 - slider
 - analytics
     - tracking CTA
