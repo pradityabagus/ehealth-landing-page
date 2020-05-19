@@ -14,10 +14,13 @@ $body-text: #7B7B7B;
 $primary-background: #F6FCFE;
 
 h1,h2,h3,h4{
-    font-family: 'helvetica-medium', Helvetica, sans-serif;
     color: $headings;
     padding:0;
     margin:0;
+}
+h1,h2{
+    font-family: 'helvetica-medium', Helvetica, sans-serif;
+
 }
 
 body{
@@ -100,7 +103,7 @@ header{
             flex-direction: row-reverse;
             align-items: center;
             height:500px;
-            padding:0;
+            padding:0 20px;
 
             
         }
@@ -147,18 +150,24 @@ header{
 
     .subheading {
         margin-top:50px;
-
+        text-align: center;
         @include media-breakpoint-up(sm){
             margin:0;
+            width: 400px;
+            text-align: left;
         }
         ul{
         list-style: none;
         padding:0;
-        text-align: center;
+        
         
             li{
                 width:80%;
-                margin: 0 auto;
+                margin: 40px auto;
+
+                @include media-breakpoint-up(sm){
+                    margin: 40px 0;
+                }
             }
         }
     }
@@ -167,7 +176,14 @@ header{
 }
 
 .testimonials{   
-    margin:70px 0;
+    padding:70px 0;
+    background-color: $primary;
+    color: #FFFFFF;
+
+    p{
+        font-family: 'helvetica-medium', Arial, Helvetica, sans-serif;
+    }
+
     @include media-breakpoint-up(sm){
         margin:80px 0;
     }
@@ -192,8 +208,9 @@ header{
 }
 
 .fitur{
-    background-color: $primary-background;
-    padding:40px 0;
+    // padding:40px 0;
+    padding-bottom: 40px;
+    text-align: center;
     ul{ 
         @extend .container;
         list-style: none;
@@ -211,14 +228,23 @@ header{
 
         li{
             width:280px;
+            margin: 20px 0;
+            // border: $body-text solid 1px;
             
             @include media-breakpoint-up(sm){
-                margin:0 20px;
+                margin:30px 20px;
             }
 
-
+            
             img{
                 width: 100%;
+            }
+
+            h3{
+                margin-top: 40px;
+            }
+            p{
+                padding: 0 20px;
             }
         }
     }
