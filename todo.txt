@@ -6,6 +6,8 @@ masukin font ke generator
 import font
 set typography
 set color palette
+- copywriting
+- perfecting layout
 - slider
 - analytics
     - tracking CTA
