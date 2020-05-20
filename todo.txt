@@ -6,18 +6,26 @@ masukin font ke generator
 import font
 set typography
 set color palette
-- copywriting
-- perfecting layout
-- slider
-- analytics
-    - tracking CTA
-- hotjar
+copywriting
+analytics
+tracking CTA
 - research SEO keywords
-    - masukin ke descriptions
+- masukin ke descriptions
 - build static n user testing
 - twitter and facebook graph
 
+nunggu dari nisa 
+---------------
+- account hubspot
+- 
+
+nunggu dari nadhya
+------------------
+- ilustrasi
 
 todo fase 2
 -----------
+- hotjar
 - bikin versi 2 untuk A/B test
+- perfecting layout
+- slider

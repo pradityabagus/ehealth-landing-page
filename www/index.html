@@ -18,12 +18,26 @@
     * using 'navigator.sendBeacon' in browser that support it.
     */
     var trackClick = function(url) {
-       gtag('send', 'event', 'outbound', 'click', url, {
-         'transport': 'beacon',
-         'hitCallback': function(){document.location = url;}
+       gtag('event', 'contact-button-landing-page-top', {
+         'event_callback': function(){window.location = url},
+         'event_category': 'Visitor Click Contact Button'
        });
+
+       
+
     }
-    </script>
+  </script>
+  <!-- Hotjar Tracking Code for ehealth.co.id -->
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1819334,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
   <title>eHealth - Humanizing Healthcare | Tag SEO di sini</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -81,12 +95,13 @@
     </div>
     
       <section class="testimonials">
-      <ul>
+      <ul class="container">
         <li>
-          <img src="./images/avatar-dokter.png" alt="foto-dokter-namanya">
+          <img src="./images/testimonial.png" alt="foto-dokter-namanya">
           <div class="testimonial-text">
-            <blockquote>eHealth membuat pekerjaan mendaftar pasien menjadi 10 kali lebih cepat</blockquote>
-            <p>Ningsih, Klinik Tongtong</p>
+            <blockquote>
+              Data manual yang ditulis dokter otomatis berubah menjadi data digital dan tersimpan secara teratur ke dalam Electronic Medical Record, sehingga data berkelanjutan mudah diakses oleh pasien maupun dokter pada kunjungan selanjutnya.</blockquote>
+            <p>Prof. Tati L. R. Mengko - Ketua Prodi Biomedik ITB</p>
           </div>
         </li>
       </ul>
