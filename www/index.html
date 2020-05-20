@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167221159-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-167221159-1');
+  </script>
+  <script>
+    /**
+    * Function that captures a click on an outbound link in Analytics.
+    * This function takes a valid URL string as an argument, and uses that URL string
+    * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+    * using 'navigator.sendBeacon' in browser that support it.
+    */
+    var trackClick = function(url) {
+       ga('send', 'event', 'outbound', 'click', url, {
+         'transport': 'beacon',
+         'hitCallback': function(){document.location = url;}
+       });
+    }
+    </script>
   <title>eHealth - Humanizing Healthcare | Tag SEO di sini</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,7 +34,7 @@
 <body>
   <header>
     <img class="logo" src="https://ehealth.co.id/img/logo_with_text.png" alt="ehealth's logo" srcset="">
-    <a class="contact-button" href="http://"><i class="fa fa-whatsapp" aria-hidden="true"></i> Hubungi Kami</a>
+    <a class="contact-button" onclick="captureOutboundLink('https://wa.me/089508573099?text=Halo+Nisa%2C+saya+ingin+bertanya+tentang+eHealth'); return false;" href="https://wa.me/089508573099?text=Halo+Nisa%2C+saya+ingin+bertanya+tentang+eHealth"><i class="fa fa-whatsapp" aria-hidden="true"></i> Hubungi Kami</a>
   </header>
     <section class="headline">
       <div class="headline-inner">
@@ -76,27 +99,27 @@
         <li>
           <img src="http://placehold.it/300X170" alt="dokterblabalbal">
           <h3>Dokter</h3>
-          <p>Mencari rekam medis dengan mudah. Input diagnosis dengan standar SOAP ICD-10 dan ICD-12</p>
+          <p>Mencari rekam medis dengan mudah. Input diagnosis dengan standar ICD-10 dan ICD-12.</p>
         </li>
         <li>
           <img src="http://placehold.it/300X170" alt="dokterblabalbal">
           <h3>Perawat</h3>
-          <p>Memasukkan data tanda vital dengan cepat dan bebas pemakaian kertas</p>
+          <p>Memasukkan data tanda vital tanpa repot, cepat, dan bebas pemakaian kertas.</p>
         </li>
         <li>
           <img src="http://placehold.it/300X170" alt="dokterblabalbal">
           <h3>Administrasi</h3>
-          <p>Mendaftarkan pasien baru, mencatat data biaya tindakan dan obat, dalam satu aplikasi</p>
+          <p>Mendaftarkan pasien baru, mencatat data biaya tindakan dan obat, dalam satu aplikasi.</p>
         </li>
         <li>
           <img src="http://placehold.it/300X170" alt="dokterblabalbal">
           <h3>Apoteker</h3>
-          <p>Melihat resep (medical request) dan melakukan medical disposal di dalam sistem</p>
+          <p>Melihat resep (medical request) dan melakukan medical disposal di dalam sistem.</p>
         </li>
         <li>
           <img src="http://placehold.it/300X170" alt="dokterblabalbal">
           <h3>Pasien</h3>
-          <p>Buat perjanjian pertemuan dengan dokter secara online. Bebas ribet dan antre.</p>
+          <p>Buat perjanjian pertemuan dengan dokter secara online. Lebih aman, bebas ribet dan antre.</p>
         </li>
 
       </ul>
