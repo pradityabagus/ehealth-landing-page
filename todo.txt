@@ -9,23 +9,27 @@ set color palette
 copywriting
 analytics
 tracking CTA
+hotjar
 - research SEO keywords
 - masukin ke descriptions
 - build static n user testing
-- twitter and facebook graph
+
 
 nunggu dari nisa 
 ---------------
 - account hubspot
-- 
 
 nunggu dari nadhya
 ------------------
 - ilustrasi
 
+nunggu dari ibrohim
+-------------------
+- testimonial
+
 todo fase 2
 -----------
-- hotjar
 - bikin versi 2 untuk A/B test
 - perfecting layout
-- slider
+- slider testimonial
+- twitter and facebook graph
